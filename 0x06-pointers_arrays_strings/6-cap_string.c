@@ -1,35 +1,24 @@
 #include "main.h"
-
 /**
- * cap_string - Capitalizes all words of a string.
- * @str: The string to be capitalized.
- *
- * Return: A pointer to the changed string.
- */
-char *cap_string(char *str)
+*print_sign-prints sign of a number
+*@n: character to be verified
+*Return: return 0 or 1
+*/
+int print_sign(int n)
 {
-	int index = 0;
-
-	while (str[index])
-	{
-		while (!(str[index] >= 'a' && str[index] <= 'z'))
-			index++;
-
-		if (str[index - 1] == ' ' ||
-		    str[index - 1] == '\t' ||
-		    str[index - 1] == '\n' ||
-		    str[index - 1] == ',' ||
-		    str[index - 1] == ';' ||
-		    str[index - 1] == '.' ||
-		    str[index - 1] == '!' ||
-		    str[index - 1] == '?' ||
-		    str[index - 1] == '"' ||
-		    str[index - 1] == '(' ||
-		    str[index - 1] == ')' ||
-		    str[index - 1] == '{' ||
-		    str[index - 1] == '}' ||
-		    index == 0)
-			str[index] -= 32;
-
-		index++;
-	}
+if (n == 0)
+{
+_putchar('0');
+return (0);
+}
+else if (n > 0)
+{
+_putchar('+');
+return (1);
+}
+else
+{
+_putchar('-');
+return (-1);
+}
+}
